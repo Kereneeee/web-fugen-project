@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>輔仁大學教務處</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="title"><img src="images/天主教輔仁大學.png" alt="Logo" class="title-icon">輔仁大學教務處</div>
+        <nav class="top-nav">
+            <a href="#">輔仁大學</a>
+            <a href="#">網站地圖</a>
+            <a href="#">本處簡介</a>
+            <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
+            <input type="text" placeholder="搜尋...">
+            <button>🔍</button>
+        </nav>
+    </header>
+
+    <nav class="main-nav">
+        <a href="#">課務選課</a>
+        <a href="#">行事曆</a>
+        <a href="#">成績/學分</a>
+        <a href="#">註冊/繳費</a>
+        <a href="#">最新公告</a>
+        <a href="#">畢業資格</a>
+        <a href="#">表單下載</a>
+        <a href="#">常見問題</a>
+    </nav>
+
+
+<section class="cards">
+    <div style="height: 150px;"></div>
+    <div class="card">
+        <i class="fas fa-chalkboard-teacher fa-2x"></i>
+        <div>教師專區</div>
+    </div>
+    <div class="card">
+        <i class="fas fa-calendar-alt fa-2x"></i>
+        <div>學生專區</div>
+    </div>
+    <div class="card">
+        <i class="fas fa-user-graduate fa-2x"></i>
+        <div>新生專區</div>
+    </div>
+    <div class="card">
+        <i class="fas fa-file-alt fa-2x"></i>
+        <div>招生專區</div>
+    </div>
+</section>
+<section class="ann_sec">
+     <div class="container">
+        <div class="left">
+            <div class="ann_nav">
+                <a href="#">全部</a>
+                <a href="#">註冊</a>
+                <a href="#">課務</a>
+                <a href="#">學涯規劃</a>
+                <a href="#">考試成績</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="搜尋公告...">
+            </div>
+            <div id="announcements">
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025-05-26</span><br>
+                    <a href="#">114學年度雙主修日間部進修部正備取名單及報到登記表</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025/05/22</span><br>
+                    <a href="#">公告申請114學年度修讀學分學程核定名單</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025/05/20</span><br>
+                    <a href="#">公告114學年度校本部學士生國內交換學生報名作業資訊簡項</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025/05/19</span><br>
+                    <a href="#">公告114轉系報到並且編班名單</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025-05-26</span><br>
+                    <a href="#">114學年度雙主修日間部進修部正備取名單及報到登記表</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025/05/22</span><br>
+                    <a href="#">公告申請114學年度修讀學分學程核定名單</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025/05/20</span><br>
+                    <a href="#">公告114學年度校本部學士生國內交換學生報名作業資訊簡項</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025/05/19</span><br>
+                    <a href="#">公告114轉系報到並且編班名單</a>
+                </div>                               
+            </div>
+            <div class="pagination">
+                <div id="pagination"></div>
+            </div>
+        </div>
+        <div class="right">
+            <iframe src="https://calendar.google.com/calendar/embed?src=6d3341c0268485919e7aef33f8326288de78791e7c4e9384a8aca25fb4197869%40group.calendar.google.com&ctz=Asia%2FTaipei"  frameborder="0"></iframe>
+        </div>
+    </div>
+
+<script>
+$(document).ready(function() {
+    const announcementsPerPage = 4;
+    let currentPage = 1;
+
+    function showPage(page) {
+        const announcements = $('.announcement:not(.hidden)');
+        const totalPages = Math.ceil(announcements.length / announcementsPerPage);
+
+        // 防止越界
+        if (page < 1) page = 1;
+        if (page > totalPages) page = totalPages;
+
+        currentPage = page;
+        announcements.hide();
+
+        const start = (page - 1) * announcementsPerPage;
+        const end = start + announcementsPerPage;
+
+        announcements.slice(start, end).show();
+
+        updatePagination();
+    }
+
+    function updatePagination() {
+        const announcements = $('.announcement:not(.hidden)');
+        const totalPages = Math.ceil(announcements.length / announcementsPerPage);
+        let paginationHtml = '';
+
+        if (totalPages <= 1) {
+            $('#pagination').html('');
+            return;
+        }
+
+        // 上一頁
+        paginationHtml += `<a href="#" class="page-link" data-page="${currentPage - 1}">«</a>`;
+
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === currentPage) {
+                paginationHtml += `<span class="current">${i}</span>`;
+            } else {
+                paginationHtml += `<a href="#" class="page-link" data-page="${i}">${i}</a>`;
+            }
+        }
+
+        // 下一頁
+        paginationHtml += `<a href="#" class="page-link" data-page="${currentPage + 1}">»</a>`;
+
+        $('#pagination').html(paginationHtml);
+    }
+
+    // 點擊頁碼
+    $(document).on('click', '.page-link', function(e) {
+        e.preventDefault();
+        const page = parseInt($(this).data('page'));
+        showPage(page);
+    });
+
+    // 搜尋功能 + 分頁更新
+    $('#search-input').on('input', function() {
+        const searchTerm = $(this).val().toLowerCase();
+        $('.announcement').each(function() {
+            const text = $(this).text().toLowerCase();
+            $(this).toggleClass('hidden', !text.includes(searchTerm));
+        });
+        showPage(1);
+    });
+
+    showPage(1);
+});
+</script>
+</section>
+
+</body>
+</html>
