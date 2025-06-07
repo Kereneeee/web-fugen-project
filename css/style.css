@@ -183,13 +183,27 @@ iframe {
   border: none;
 }
 
+.more {
+    padding: 6px 12px;
+    background-color: #096db0;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.more:hover {
+  background-color: #055a9f;
+  transition: background-color 0.3s ease;
+}
+
 .pagination {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
-  position: absolute; 
-  bottom: 20px; 
-  right: 20px;
-  width: auto;
+  box-sizing: border-box;
 }
 
 .pagination a, .pagination span {

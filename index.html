@@ -57,20 +57,29 @@
      <div class="container">
         <div class="left">
             <div class="ann_nav">
-                <a href="#">全部</a>
-                <a href="#">註冊</a>
-                <a href="#">課務</a>
-                <a href="#">學涯規劃</a>
-                <a href="#">考試成績</a>
+                <a href="#" class="active" data-category="全部">全部</a>
+                <a href="#" data-category="課務">課務</a>
+                <a href="#" data-category="學涯規劃">學涯規劃</a>
+                <a href="#" data-category="考試成績">考試成績</a>
+                <a href="#" data-category="註冊">註冊</a>
+                <a href="#" data-category="其他">其他</a>
             </div>
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="搜尋公告...">
             </div>
             <div id="announcements">
                 <div class="announcement">
-                    <a class="category" href="#">學涯規劃</a><span>2025-05-26</span><br>
-                    <a href="#">114學年度雙主修日間部進修部正備取名單及報到登記表</a>
+                    <a class="category" href="#">學涯規劃</a><span>2025-06-02</span><br>
+                    <a href="#">114學年度雙主修核定名單</a>
                 </div>
+                <div class="announcement">
+                    <a class="category" href="#">課務</a><span>2025-06-02</span><br>
+                    <a href="#">114學年度第1學期選課須知</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">學涯規劃</a><span>2025-05-28</span><br>
+                    <a href="#">114學年度雙主修備取生錄取名單</a>
+                </div>                                
                 <div class="announcement">
                     <a class="category" href="#">學涯規劃</a><span>2025/05/22</span><br>
                     <a href="#">公告申請114學年度修讀學分學程核定名單</a>
@@ -84,23 +93,56 @@
                     <a href="#">公告114轉系報到並且編班名單</a>
                 </div>
                 <div class="announcement">
-                    <a class="category" href="#">學涯規劃</a><span>2025-05-26</span><br>
-                    <a href="#">114學年度雙主修日間部進修部正備取名單及報到登記表</a>
+                    <a class="category" href="#">考試成績</a><span>2025/03/12</span><br>
+                    <a href="#">113學年度第2學期【期中考試】研究生支援監考登記公告</a>
                 </div>
                 <div class="announcement">
-                    <a class="category" href="#">學涯規劃</a><span>2025/05/22</span><br>
-                    <a href="#">公告申請114學年度修讀學分學程核定名單</a>
+                    <a class="category" href="#">課務</a><span>2025/03/04</span><br>
+                    <a href="#">本學期（113-2）停修截止時間：114/05/02週五 17:00(日)、21:30(進)</a>
                 </div>
                 <div class="announcement">
-                    <a class="category" href="#">學涯規劃</a><span>2025/05/20</span><br>
-                    <a href="#">公告114學年度校本部學士生國內交換學生報名作業資訊簡項</a>
+                    <a class="category" href="#">考試成績</a><span>2025/01/22</span><br>
+                    <a href="#">114碩士班招生考試（114.2.21週五）上課教室調整明細</a>
                 </div>
                 <div class="announcement">
-                    <a class="category" href="#">學涯規劃</a><span>2025/05/19</span><br>
-                    <a href="#">公告114轉系報到並且編班名單</a>
-                </div>                               
+                    <a class="category" href="#">其他</a><span>2024/12/18</span><br>
+                    <a href="#">📣📣📣113-1教學評量週週抽(2024年12月18日系統抽出)獲獎名單公告</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">其他</a><span>2024/12/13</span><br>
+                    <a href="#">113-1畢業證書領取事宜公告</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">註冊</a><span>2024/12/12</span><br>
+                    <a href="#">113學年度第2學期註冊須知</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">其他</a><span>2024/12/11</span><br>
+                    <a href="#">📣📣📣113-1教學評量週週抽(2024年12月11日系統抽出)獲獎名單公告</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">課務</a><span>2024/11/22</span><br>
+                    <a href="#">113學年度第2學期選課須知</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">考試成績</a><span>2024/10/08</span><br>
+                    <a href="#">113學年度第1學期【期中考試】研究生支援監考登記公告</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">課務</a><span>2024/09/26</span><br>
+                    <a href="#">本學期（113-1）停修截止時間：113/11/25週一 17:00(日)、21:30(進)</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">課務</a><span>2024/09/02</span><br>
+                    <a href="#">『緊急通知』(113-1)本學期網路初選第二次選課登記提前開始公告</a>
+                </div>
+                <div class="announcement">
+                    <a class="category" href="#">課務</a><span>2024/06/17</span><br>
+                    <a href="#">113學年度第1學期選課須知</a>
+                </div>              
             </div>
             <div class="pagination">
+                <a href="#" class="more">更多公告</a>
                 <div id="pagination"></div>
             </div>
         </div>
@@ -178,6 +220,25 @@ $(document).ready(function() {
     });
 
     showPage(1);
+
+    // 點擊分類過濾公告
+    $('.ann_nav a').on('click', function(e) {
+        e.preventDefault(); // 阻止跳轉
+
+        const selectedCategory = $(this).text().trim();
+
+        $('.announcement').each(function() {
+            const annCategory = $(this).find('.category').text().trim();
+            if (selectedCategory === '全部' || annCategory === selectedCategory) {
+                $(this).removeClass('hidden');
+            } else {
+                $(this).addClass('hidden');
+            }
+        });
+
+        $('#search-input').val(''); // 清空搜尋欄
+        showPage(1); // 重置分頁
+    });
 });
 </script>
 </section>
