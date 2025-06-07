@@ -117,6 +117,7 @@ body {
 .left {
   width: 60%;
   padding: 20px;
+  position: relative;
   overflow-y: auto;
   border-right: 1px solid #ccc;
 }
@@ -185,6 +186,10 @@ iframe {
 .pagination {
   text-align: center;
   margin-top: 20px;
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px;
+  width: auto;
 }
 
 .pagination a, .pagination span {
