@@ -6,47 +6,51 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
+    .student-body {
       font-family: 'Noto Sans TC', sans-serif;
       background-color: #e9ecf2;
       margin: 0;
       padding: 2rem;
     }
 
-    h1 {
+    .student-body h1 {
       font-size: 28px;
       color: #096db0;
       margin-bottom: 0px;
       margin-left: 25px;
     }
 
-    .container {
+    .student-body .container {
       display: flex;
       gap: 1rem;
+      align-items: flex-start; 
+      justify-content: center;
     }
 
-    .cards {
+    .student-body .cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       flex: 1;
     }
 
-    .card {
+    .student-body .card {
       background: #fff;
       border: 1px solid #cacdd6;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       padding: 1.5rem;
-      padding-top: 0.5rem;
+      padding-top: 1rem;
+      padding-bottom: 0.75rem;
       width: 400px;
+      text-align: center;
     }
 
-    .card:hover{
+    .student-body .card:hover {
       background-color: #fff;
     }
 
-    .card h2 {
+    .student-body .card h2 {
       font-size: 16px;
       background-color: #8892a9; 
       color: white;
@@ -56,7 +60,7 @@
       border-radius: 8px;
     }
 
-    .sidebar {
+    .student-body .sidebar {
       width: 240px;
       background: #fff;
       border-radius: 10px;
@@ -64,23 +68,24 @@
       padding: 1.5rem;
       height: fit-content;
       text-align: center;
+      margin-top: 25px;
     }
 
-    .sidebar h2 {
+    .student-body .sidebar h2 {
       font-size: 18px;
       color: #00416b;
       margin: 0.5rem 0;
       font-weight: bold;
     }
 
-    .sidebar hr {
+    .student-body .sidebar hr {
       height: 0;
       border: none;
       border-top: 2px solid #00416b;
       margin: 0.5rem 0; 
     }
 
-    .sidebar a {
+    .student-body .sidebar a {
       display: block;
       color: #00416b;
       font-size: 14px;
@@ -89,33 +94,48 @@
       line-height: 2;
     }
 
-    .sidebar a:hover {
+    .student-body .sidebar a:hover {
       text-decoration: underline;
     }
 
-    .link-table {
-    width: 100%;
-    border-spacing: 0.5rem 0.4rem; 
+    .student-body .link-table {
+      width: 100%;
+      border-spacing: 0.5rem 0.4rem;
+      border-collapse: separate;  
     }
 
-    .link-table td {
-    padding: 0;
-    vertical-align: top;
+    .student-body .link-table td {
+      padding: 0 0.5rem;
+      vertical-align: top;
+      width: 50%;
     }
 
-    .link-table a {
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
+    .student-body .link-table td:first-child {
+      border-right: 1px solid #bbb;
+      padding-right: 1rem;
     }
 
-    .link-table a:hover {
-    text-decoration: underline;
-    color: #096db0;
+    .student-body .link-table td:last-child {
+      padding-left: 1rem;
     }
+
+    .student-body .link-table a {
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .student-body .link-table a:hover {
+      text-decoration: underline;
+      color: #096db0;
+    }
+
   </style>
 </head>
 <body>
+
+<section>
+  <div class="student-body">  
   <h1>學生專區</h1>
   <div class="container">
     <div class="cards">
@@ -251,5 +271,7 @@
       <a href="http://www.hec.fju.edu.tw/">全人教育課程中心</a>
     </div>
   </div>
+  </div>
+</section>
 </body>
 </html>
