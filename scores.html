@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>成績/學分</title>
+  <link rel="icon" href="images/title_logo.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -29,23 +30,26 @@
     <a href="calender.htm">行事曆</a>
     <a href="#">成績/學分</a>
     <a href="#">註冊/繳費</a>
+    <a href="#">行事曆</a>
+    <a href="scores.html">成績/學分</a>
+    <a href="money.html">註冊/繳費</a>
     <a href="#">最新公告</a>
     <a href="#">畢業資格</a>
-    <a href="#">表單下載</a>
+    <a href="download.html">表單下載</a>
     <a href="#">常見問題</a>
   </nav>
 
   <!-- 主內容區域：左側 + 中間 iframe -->
   <div class="container">
-    <div class="sidebar">
-      <a href="rules.html" target="contentFrame">抵免規則</a>
-      <a href="apply.html" target="contentFrame">申請作業</a>
-      <a href="form.html" target="contentFrame">申請表</a>
-      <a href="transfer.html" target="contentFrame">轉系生申請表</a>
+    <div class="sidebar" style="text-align: center;">
+      <div style="height: 15px;"></div>
+      <a href="iframe/scores-1.html" target="contentFrame">學分抵免</a>
+      <a href="iframe/scores-2.html" target="contentFrame">系所專區</a>
+      <a href="iframe/scores-3.html" target="contentFrame">教師專區</a>
     </div>
 
     <div class="main">
-      <iframe name="contentFrame" src="rules.html"></iframe>
+      <iframe name="contentFrame" src="iframe/scores-1.html"></iframe>
     </div>
   </div>
 </body>

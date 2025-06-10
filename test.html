@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>藍色風格六區塊網頁</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", sans-serif;
+      background-color: #e6f0fa;
+      color: #033e6b;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 2px solid #7ab8f5;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #045a9c;
+      border-bottom: 1px solid #7ab8f5;
+      padding-bottom: 10px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    .card ul li a {
+      text-decoration: none;
+      color: #045a9c;
+      display: block;
+      padding: 6px 0;
+      transition: color 0.2s;
+    }
+
+    .card ul li a:hover {
+      color: #012a52;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h3>區塊一</h3>
+      <ul>
+        <li><a href="#">連結一</a></li>
+        <li><a href="#">連結二</a></li>
+        <li><a href="#">連結三</a></li>
+        <li><a href="#">連結四</a></li>
+        <li><a href="#">連結五</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>區塊二</h3>
+      <ul>
+        <li><a href="#">連結一</a></li>
+        <li><a href="#">連結二</a></li>
+        <li><a href="#">連結三</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>區塊三</h3>
+      <ul>
+        <li><a href="#">連結一</a></li>
+        <li><a href="#">連結二</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>區塊四</h3>
+      <ul>
+        <li><a href="#">連結一</a></li>
+        <li><a href="#">連結二</a></li>
+        <li><a href="#">連結三</a></li>
+        <li><a href="#">連結四</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>區塊五</h3>
+      <ul>
+        <li><a href="#">連結一</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>區塊六</h3>
+      <ul>
+        <li><a href="#">連結一</a></li>
+        <li><a href="#">連結二</a></li>
+        <li><a href="#">連結三</a></li>
+        <li><a href="#">連結四</a></li>
+        <li><a href="#">連結五</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
