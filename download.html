@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>成績/學分</title>
+    <link rel="icon" href="images/title_logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+  body {
+    margin: 0;
+    font-family: "Microsoft JhengHei", sans-serif;
+    background-color: white;
+    color: #033e6b;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 2px solid #7ab8f5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .card h3 {
+    margin-top: 0;
+    color: #045a9c;
+    border-bottom: 1px solid #7ab8f5;
+    padding-bottom: 10px;
+    margin-bottom: 8px; 
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .card ul li a {
+    text-decoration: none;
+    color: #045a9c;
+    display: block;
+    padding: 6px 0;
+    transition: color 0.2s;
+  }
+
+  .card ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    background-color: #045a9c;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .card ul li a:hover {
+    color: #012a52;
+    text-decoration: underline;
+  }
+
+  </style>
+</head>
+
+<body>
+<header class="top-bar">
+    <div class="title">
+      <img src="images/天主教輔仁大學.png" alt="Logo" class="title-icon">
+      <a href="index.html">輔仁大學教務處</a>
+    </div>
+    <nav class="top-nav">
+      <a href="#">輔仁大學</a>
+      <a href="#">網站地圖</a>
+      <a href="#">本處簡介</a>
+      <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
+      <input type="text" placeholder="搜尋...">
+      <button>🔍</button>
+    </nav>
+  </header>
+
+  <nav class="main-nav">
+    <a href="#">課務選課</a>
+    <a href="#">行事曆</a>
+    <a href="scores.html">成績/學分</a>
+    <a href="money.html">註冊/繳費</a>
+    <a href="#">最新公告</a>
+    <a href="#">畢業資格</a>
+    <a href="download.html">表單下載</a>
+    <a href="#">常見問題</a>
+  </nav>
+  
+  <div style="height: 15px;"></div>
+  <h1 style="text-align: center;font-size: 25px;">表單下載</h1>
+
+  <div class="container">
+    <div class="card">
+      <h3>行政</h3>
+      <ul>
+        <li><a href="#">教務會議提案單〈院系所〉</a></li>
+        <li><a href="#">教務會議提案單〈學生代表〉</a></li>
+        <li><a href="#">教學績優教師獎勵推薦表</a></li>
+      </ul>
+    </div>
+  
+    <div class="card">
+      <h3>教學助理</h3>
+      <ul>
+        <li><a href="#">學院型教學助理約用資料表</a></li>
+        <li><a href="#">學院型教學助理工作日誌_核銷用</a></li>
+        <li><a href="#">學院型輔導教學助理_請領清冊</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>陸生研究獎勵金</h3>
+      <ul>
+        <li><a href="https://docsacademic.fju.edu.tw/form/%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8%E9%99%B8%E7%94%9F%E5%8F%83%E8%88%87%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB%E7%A0%94%E7%A9%B6%E8%A8%88%E7%95%AB%E4%B9%8B%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B.pdf">陸生參與專任教師研究計畫之申請<br>&nbsp;&nbsp;&nbsp;流程</a></li>
+        <li><a href="#">專任教師申請陸研究生研究計畫申<br>&nbsp;&nbsp;&nbsp;請書 (申請時繳交)</a></li>
+        <li><a href="#">陸生研究生參與專任教師研究之學<br>&nbsp;&nbsp;&nbsp;習計畫書 (申請時繳交)</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>教學與課程計畫配合款</h3>
+      <ul>
+        <li><a href="https://docsacademic.fju.edu.tw/form/%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8%E8%AA%B2%E7%A8%8B%E8%88%87%E6%95%99%E5%AD%B8%E8%A8%88%E7%95%AB%E9%85%8D%E5%90%88%E6%AC%BE%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B.pdf">課程與教學計畫配合款申請流程</a></li>
+        <li><a href="#">教學及課程相關計畫處理單</a></li>
+        <li><a href="#">教學及課程計畫配合款申請表</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>產業實習暨產學合作委員會</h3>
+      <ul>
+        <li><a href="https://docsacademic.fju.edu.tw/form/%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8%E7%94%A2%E6%A5%AD%E5%AF%A6%E7%BF%92%E8%AA%B2%E7%A8%8B%E4%BD%9C%E6%A5%AD%E6%B5%81%E7%A8%8B.pdf">產業實習課程作業流程</a></li>
+        <li><a href="#">產業實習委員會委員請發聘函名單</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>學籍</h3>
+      <ul>
+        <li><a href="#">新生學生證(校園卡)申請書</a></li>
+        <li><a href="#">天主教輔仁大學立案證明書申請單</a></li>
+        <li><a href="#">更改個人資料申請書</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>離校(含休學、退學、畢業)</h3>
+      <ul>
+        <li><a href="#">休退學離校程序單</a></li>
+        <li><a href="#">延長休學申請書</a></li>
+        <li><a href="#">提前復學申請書</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>研究生專區</h3>
+      <ul>
+        <li><a href="#">學生逕修讀博士學位申請書</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>成績</h3>
+      <ul>
+        <li><a href="#">學生修習科目學分證明</a></li>
+        <li><a href="#">延長修業(補修學分)證明書</a></li>
+        <li><a href="#">跨領域學習資格變更申請書</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>課務</h3>
+      <ul>
+        <li><a href="#">本校生至外校跨校選課申請表</a></li>
+        <li><a href="#">校際暑修選課申請表</a></li>
+        <li><a href="#">教師授課證明書申請表</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>彈性課程相關表單</h3>
+      <ul>
+        <li><a href="#"> 彈性課程校際選課申請表</a></li>
+        <li><a href="#">彈性課程校際選課申請表 (odt)</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>試務</h3>
+      <ul>
+        <li><a href="#">考試違規紀錄表</a></li>
+        <li><a href="#">60人監考表</a></li>
+        <li><a href="#">期中、學期考試試題紙</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>招生</h3>
+      <ul>
+        <li><a href="#">招生</a></li>
+        <li><a href="#">招生結餘款補助系所發展及院長指<br>&nbsp;&nbsp;&nbsp;定運用款支用計畫表</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>大學進修部四年制學士班彈性修業試辦方案</h3>
+      <ul>
+        <li><a href="#"> 彈性修業試辦方案申請書112學年<br>&nbsp;&nbsp;&nbsp;起適用.pdf</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>學士班學生就學期間服役彈性修業實施計畫</h3>
+      <ul>
+        <li><a href="#">就學役男彈性修業申請書(odt)</a></li>
+        <li><a href="#">就學役男彈性修業申請書</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>教學評量</h3>
+      <ul>
+        <li><a href="#">教學評量資料需求申請書</a></li>
+        <li><a href="#">教學評量資料需求申請書（odt）</a></li>
+      </ul>
+    </div>
+
+  </div>
+</body>
