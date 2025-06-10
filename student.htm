@@ -6,11 +6,87 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .top-bar {
+    background-color: #096db0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    height: 70px;
+    }
+
+    .title {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: white; 
+    }
+
+    .title a{
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+    }
+
+    .title-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+    vertical-align: middle;
+    }
+
+    .top-nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    vertical-align: middle;
+    }
+
+    .top-nav input {
+    padding: 5px;
+    vertical-align: middle;
+    }
+
+    .top-nav button {
+    padding: 5px 10px;
+    background-color: white;
+    color: #0c60a5;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    }
+
+    .main-nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e0e0e0;
+    padding: 10px 0;
+    }
+
+    .main-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 1000;
+    font-size: 18px;
+    }
     .student-body {
       font-family: 'Noto Sans TC', sans-serif;
       background-color: #e9ecf2;
       margin: 0;
       padding: 2rem;
+      height: 750px;
     }
 
     .student-body h1 {
@@ -18,6 +94,7 @@
       color: #096db0;
       margin-bottom: 0px;
       margin-left: 25px;
+      margin-top: 0px;
     }
 
     .student-body .container {
@@ -129,12 +206,36 @@
       text-decoration: underline;
       color: #096db0;
     }
-
   </style>
 </head>
 <body>
+<div>
+<header class="top-bar">
+    <div class="title">
+      <img src="images/天主教輔仁大學.png" alt="Logo" class="title-icon">
+      <a href="index.html">輔仁大學教務處</a>
+    </div>
+    <nav class="top-nav">
+      <a href="#">輔仁大學</a>
+      <a href="#">網站地圖</a>
+      <a href="#">本處簡介</a>
+      <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
+      <input type="text" placeholder="搜尋...">
+      <button>🔍</button>
+    </nav>
+  </header>
 
-<section>
+  <nav class="main-nav">
+    <a href="#">課務選課</a>
+    <a href="calender.htm">行事曆</a>
+    <a href="scores.html">成績/學分</a>
+    <a href="#">註冊/繳費</a>
+    <a href="#">最新公告</a>
+    <a href="#">畢業資格</a>
+    <a href="#">表單下載</a>
+    <a href="#">常見問題</a>
+  </nav>
+</div>
   <div class="student-body">  
   <h1>學生專區</h1>
   <div class="container">
@@ -264,7 +365,7 @@
       <a href="https://sis.fju.edu.tw/#/">學生資訊平台</a>
       <a href="https://portal.fju.edu.tw/student/">學生資訊入口網</a>
       <a href="http://smis.fju.edu.tw/freshman/login.aspx">學生資訊管理系統</a>
-      <a href="#">行事曆</a>
+      <a href="calender.htm">行事曆</a>
       <a href="https://course.fju.edu.tw/">選課資訊網</a>
       <a href="https://whoami.fju.edu.tw/ac_start.php">單一帳號(LDAP)啟動網站</a>
       <a href="https://assessment.fju.edu.tw/#/login">教學評量入口</a>
@@ -272,6 +373,6 @@
     </div>
   </div>
   </div>
-</section>
+
 </body>
 </html>

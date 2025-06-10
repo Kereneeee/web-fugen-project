@@ -26,12 +26,14 @@ body {
 .title a{
   text-decoration: none;
   color: white;
+  vertical-align: middle;
 }
 
 .title-icon {
   width: 32px;
   height: 32px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .top-nav a {
@@ -40,10 +42,12 @@ body {
   text-decoration: none;
   font-size: 18px;
   font-weight: 800;
+  vertical-align: middle;
 }
 
 .top-nav input {
   padding: 5px;
+  vertical-align: middle;
 }
 
 .top-nav button {
@@ -52,6 +56,7 @@ body {
   color: #0c60a5;
   border: none;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .main-nav {
@@ -126,7 +131,6 @@ body {
   width: 60%;
   padding: 20px;
   position: relative;
-  overflow-y: auto;
   border-right: 1px solid #ccc;
 }
 
@@ -200,7 +204,7 @@ body {
 
 iframe {
   width: 100%;
-  height: 485px;
+  height: 400px;
   border: none;
 }
 
@@ -341,11 +345,13 @@ footer{
 
 .sidebar a {
   display: block;
-  margin: 10px 0;
+  margin: 10px 10px;
   color: #0c60a5;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cdcfd0;
 }
 
 .sidebar a:hover {

@@ -5,6 +5,76 @@
   <title>行事曆</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    .top-bar {
+    background-color: #096db0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    height: 70px;
+    }
+
+    .title {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: white; 
+    }
+
+    .title a{
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+    }
+
+    .title-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+    vertical-align: middle;
+    }
+
+    .top-nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    vertical-align: middle;
+    }
+
+    .top-nav input {
+    padding: 5px;
+    vertical-align: middle;
+    }
+
+    .top-nav button {
+    padding: 5px 10px;
+    background-color: white;
+    color: #0c60a5;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    }
+
+    .main-nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e0e0e0;
+    padding: 10px 0;
+    }
+
+    .main-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 1000;
+    font-size: 18px;
+    }
+
     :root {
       --main-color: #096db0;
     }
@@ -24,7 +94,6 @@
     .left {
       width: 50%;
       padding: 30px;
-      overflow-y: auto;
       border-right: 2px solid #ddd;
       background-color: #ffffff;
     }
@@ -35,76 +104,103 @@
       background-color: #eaf3f9;
     }
 
-    h1 {
-      background-color: var(--main-color);
-      color: #fff;
-      padding: 20px 32px;
-      font-size: 30px;
-      margin: -30px -30px 30px -30px; /* 把 padding 吃回來，滿版藍底 */
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .calendar h1 {
+    color: #00416b;
+    padding: 20px 32px;
+    font-size: 30px;
+    margin: -30px -30px 30px -30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 4px solid #00416b;
     }
 
-    h1 i {
-      color: #fff;
+    .calendar h1 i {
+    color: #00416b;
     }
 
-    h3 {
-      color: var(--main-color);
-      font-size: 24px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-      margin-top: 30px;
-      margin-bottom: 10px;
+    .calendar h3 {
+    color: var(--main-color);
+    font-size: 24px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     }
 
-    h5 {
-      font-size: 15px;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      background-color: #8e9ea9;
-      color: #fff;
-      padding: 2px 6px;
-      display: inline-block;
-      border-radius: 4px;
+    .calendar h5 {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #8e9ea9;
+    color: #fff;
+    padding: 2px 6px;
+    display: inline-block;
+    border-radius: 4px;
     }
 
-    a {
-      display: block;
-      margin: 8px 0;
-      color: #00416b;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease-in-out;
+    .calendar a {
+    display: block;
+    margin: 8px 0;
+    color: #00416b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
     }
 
-    a span {
-      display: inline;
-      font-size: 0.9em;
-      color: #666;
-      margin-left: 10px;
+    .calendar a span {
+    display: inline;
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
     }
 
-    a:hover {
-      color: #05497a;
-      text-decoration: underline;
+    .calendar a:hover {
+    color: #05497a;
+    text-decoration: underline;
     }
 
-    p {
-      font-size: 0.95em;
-      line-height: 1.5;
-      color: #444;
+    .calendar p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #444;
     }
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .calendar iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
     }
   </style>
 </head>
 <body>
+    <header class="top-bar">
+    <div class="title">
+      <img src="images/天主教輔仁大學.png" alt="Logo" class="title-icon">
+      <a href="index.html">輔仁大學教務處</a>
+    </div>
+    <nav class="top-nav">
+      <a href="#">輔仁大學</a>
+      <a href="#">網站地圖</a>
+      <a href="#">本處簡介</a>
+      <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
+      <input type="text" placeholder="搜尋...">
+      <button>🔍</button>
+    </nav>
+  </header>
+
+  <nav class="main-nav">
+    <a href="#">課務選課</a>
+    <a href="calender.htm">行事曆</a>
+    <a href="scores.html">成績/學分</a>
+    <a href="#">註冊/繳費</a>
+    <a href="#">最新公告</a>
+    <a href="#">畢業資格</a>
+    <a href="#">表單下載</a>
+    <a href="#">常見問題</a>
+  </nav>
+</div>
+<div class="calendar">
   <div class="container">
     <div class="left">
       <h1><i class="fa-solid fa-calendar-days"></i> 行事曆</h1>
@@ -130,6 +226,7 @@
 
     <div class="right">
       <iframe src="https://calendar.google.com/calendar/embed?src=6d3341c0268485919e7aef33f8326288de78791e7c4e9384a8aca25fb4197869%40group.calendar.google.com&ctz=Asia%2FTaipei"></iframe>
+    </div>
     </div>
   </div>
 </body>
