@@ -7,69 +7,130 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-        font-family: "Microsoft JhengHei", sans-serif;
-        background-color: white;
-        margin: 40px;
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
         color: #333;
         }
 
-        .main-content {
-        max-width: 900px;
-        margin: auto;
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+        
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
         }
 
-        .section {
-        margin-bottom: 50px;
-        }
-
-        .section h2 {
-        font-size: 24px;
-        color: #1c1c1c;
-        margin-bottom: 15px;
-        }
-
-        .section p {
-        margin-left: 20px;
-        }
-
-        .section a {
-        text-decoration: none;
-        color: #0c60a5;
-        font-size: 18px;
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
         font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
         }
 
-        .section a::before {
-        content: "▸ ";
-        margin-right: 5px;
+        .accordion-header:hover {
+        background-color: #e2ecf7;
         }
 
-        .section a:hover {
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
         text-decoration: underline;
-        color: #003162;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
         }
     </style>
 </head>
+
 <body>
-    <div class="main-content">
-        <div class="section">
-        <h2>輔仁大學學生抵免科目規則</h2>
-        <p><a href="https://docsacademic.fju.edu.tw/edulaw/%E5%AD%B8%E7%94%9F%E6%8A%B5%E5%85%8D%E7%A7%91%E7%9B%AE%E8%A6%8F%E5%89%87.pdf">輔仁大學學生抵免科目規則</a></p>
-        </div>
+    <h1>學分抵免</h1>
 
-        <div class="section">
-        <h2>學生申請抵免科目作業</h2>
-        <p><a href="https://docsacademic.fju.edu.tw/about%20graduate/%E5%AD%B8%E7%94%9F%E7%94%B3%E8%AB%8B%E6%8A%B5%E5%85%8D%E7%A7%91%E7%9B%AE%E4%BD%9C%E6%A5%AD.pdf">學生申請抵免科目作業</a></p>
-        </div>
-
-        <div class="section">
-        <h2>抵免科目申請表</h2>
-        <p><a href="">抵免科目申請表</a></p>
-        </div>
-
-        <div class="section">
-        <h2>抵免科目申請表〈轉系生〉</h2>
-        <p><a href="">抵免科目申請表〈轉系生〉</a></p>
+    <div class="accordion-item">
+        <div class="accordion-header">輔仁大學學生抵免科目規則</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/edulaw/學生抵免科目規則.pdf">輔仁大學學生抵免科目規則</a>
         </div>
     </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">學生申請抵免科目作業</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20graduate/%E5%AD%B8%E7%94%9F%E7%94%B3%E8%AB%8B%E6%8A%B5%E5%85%8D%E7%A7%91%E7%9B%AE%E4%BD%9C%E6%A5%AD.pdf">學生申請抵免科目作業</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">學生申請抵免科目申請表</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%8A%B5%E5%85%8D%E7%A7%91%E7%9B%AE%E7%94%B3%E8%AB%8B%E8%A1%A8.ods">抵免科目申請表</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">學生申請抵免科目申請表(轉學生)</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20graduate/%E8%BD%89%E7%B3%BB%E7%94%9F%E6%8A%B5%E5%85%8D%E7%A7%91%E7%9B%AE%E7%94%B3%E8%AB%8B%E8%A1%A8.doc">抵免科目申請表(轉系生)</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
 </body>
+</html>

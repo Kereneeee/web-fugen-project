@@ -7,62 +7,118 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-        font-family: "Microsoft JhengHei", sans-serif;
-        background-color: white;
-        margin: 40px;
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
         color: #333;
         }
 
-        .main-content {
-        max-width: 900px;
-        margin: auto;
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+        
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
         }
 
-        .section {
-        margin-bottom: 50px;
-        }
-
-        .section h2 {
-        font-size: 24px;
-        color: #1c1c1c;
-        margin-bottom: 15px;
-        }
-
-        .section p {
-        margin-left: 20px;
-        }
-
-        .section a {
-        text-decoration: none;
-        color: #0c60a5;
-        font-size: 18px;
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
         font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
         }
 
-        .section a::before {
-        content: "▸ ";
-        margin-right: 5px;
+        .accordion-header:hover {
+        background-color: #e2ecf7;
         }
 
-        .section a:hover {
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
         text-decoration: underline;
-        color: #003162;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
         }
     </style>
 </head>
-<body>
-    <div class="main-content">
-        <div class="section">
-        <h2>教師更正學生學期成績申請表</h2>
-        <p>
-            <a href="">教師更正學生學期成績申請表</a><br>
-            <a href="">教師更正學生學期成績申請表(odt)</a>
-        </p>
-        </div>
 
-        <div class="section">
-        <h2>教師上傳學期成績作業流程</h2>
-        <p><a href="https://docsacademic.fju.edu.tw/form/%E6%95%99%E5%B8%AB%E4%B8%8A%E5%82%B3%E5%AD%B8%E6%9C%9F%E6%88%90%E7%B8%BE%E4%BD%9C%E6%A5%AD%E6%B5%81%E7%A8%8B.pdf">教師上傳學期成績作業流程</a></p>
+<body>
+    <h1>教師專區</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">教師更正學生學期成績申請表</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%95%99%E5%B8%AB%E6%9B%B4%E6%AD%A3%E5%AD%B8%E7%94%9F%E5%AD%B8%E6%9C%9F%E6%88%90%E7%B8%BE%E7%94%B3%E8%AB%8B%E8%A1%A8.doc">教師更正學生學期成績申請表</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%95%99%E5%B8%AB%E6%9B%B4%E6%AD%A3%E5%AD%B8%E7%94%9F%E5%AD%B8%E6%9C%9F%E6%88%90%E7%B8%BE%E7%94%B3%E8%AB%8B%E8%A1%A8.odt">教師更正學生學期成績申請表(odt)</a>
         </div>
     </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">教師上傳學期成績作業流程</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%95%99%E5%B8%AB%E4%B8%8A%E5%82%B3%E5%AD%B8%E6%9C%9F%E6%88%90%E7%B8%BE%E4%BD%9C%E6%A5%AD%E6%B5%81%E7%A8%8B.pdf">教師上傳學期成績作業流程</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
 </body>
+</html>

@@ -7,54 +7,112 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-        font-family: "Microsoft JhengHei", sans-serif;
-        background-color: white;
-        margin: 40px;
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
         color: #333;
         }
 
-        .main-content {
-        max-width: 900px;
-        margin: auto;
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+        
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
         }
 
-        .section {
-        margin-bottom: 50px;
-        }
-
-        .section h2 {
-        font-size: 24px;
-        color: #1c1c1c;
-        margin-bottom: 15px;
-        }
-
-        .section p {
-        margin-left: 20px;
-        }
-
-        .section a {
-        text-decoration: none;
-        color: #0c60a5;
-        font-size: 18px;
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
         font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
         }
 
-        .section a::before {
-        content: "▸ ";
-        margin-right: 5px;
+        .accordion-header:hover {
+        background-color: #e2ecf7;
         }
 
-        .section a:hover {
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
         text-decoration: underline;
-        color: #003162;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
         }
     </style>
 </head>
+
 <body>
-    <div class="main-content">
-        <div class="section">
-        <h2>114學年度第1學期註冊須知</h2>
-        <p><a href=""> 114學年度第1學期註冊須知</a></p>
+    <h1>註冊須知</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">114學年度第1學期註冊須知</div>
+        <div class="accordion-content">
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=3&labelID=40&subLabelID=872&fileID=1"></a>
+            
         </div>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
 </body>
+</html>
