@@ -357,6 +357,18 @@ footer{
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.sidebar h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 0px;
+  color: #032745;
+  font-weight: bold;
+  font-size: 37px;
+  border-top: 2.5px solid #032745;
+  border-bottom: 2.5px solid #032745;
+}
+
 .sidebar a {
   display: block;
   margin: 10px 10px;
