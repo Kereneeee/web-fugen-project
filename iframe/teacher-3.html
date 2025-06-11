@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+        }
+
+        h1 {
+        font-size: 2rem;
+        border-bottom: 3px solid #0055aa;
+        padding-bottom: 10px;
+        color: #0055aa;
+        }
+
+        .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+        .card {
+        flex: 1 1 calc(50% - 20px);
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .unit-title p{
+        font-size: 1.5rem;
+        color: #222;
+        }
+
+        .unit-title {
+        font-size: 1.5rem;
+        color: #222;
+        border-left: 6px solid #0077cc;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        }
+
+        ul.service-list a{
+        text-decoration: underline;
+        color: rgb(26, 26, 26);
+        }
+
+        ul.service-list {
+        padding-left: 20px;
+        list-style-type: decimal;
+        }
+
+        .texts {
+        margin-top: 40px;
+        }
+
+        .texts p {
+        margin-bottom: 10px;
+        }
+
+        .texts a {
+        text-decoration: underline;
+        color: #0055aa;
+        font-weight: normal;
+        font-size: 1rem;
+        }
+
+        @media screen and (max-width: 600px) {
+        .card {
+            flex: 1 1 100%;
+        }
+
+        .unit-title {
+            font-size: 1.2rem;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>教學互動與課程評量</h1>
+
+    <div class="card-container">
+        <div class="card">
+        <div class="unit-title"></div>
+            <p>
+            協助課程改善與促進師生互動，精進教學成效。分析教學評量結果與教師教學成效之間之關連性，提供系所<br>
+            完整參考資訊，改進提昇教學。
+            </p>
+            <ul class="service-list">
+                <li><a href="http://docs.academic.fju.edu.tw/edulaw/%E6%95%99%E5%AD%B8%E8%A9%95%E9%87%8F%E8%BE%A6%E6%B3%95.pdf">輔仁大學教學評量辦法</a></li>
+                <li><a href="http://docs.academic.fju.edu.tw/edulaw/%E6%95%99%E5%AD%B8%E8%A8%AD%E8%A8%88%E8%88%87%E4%BA%92%E5%8B%95%E8%A9%95%E9%87%8F%E5%A7%94%E5%93%A1%E6%9C%83%E8%A8%AD%E7%BD%AE%E8%BE%A6%E6%B3%95.pdf">輔仁大學教學設計與互動評量委員會設置辦法</a></li>
+                <li><a href="https://docsacademic.fju.edu.tw/form/%E6%95%99%E5%AD%B8%E8%A9%95%E9%87%8F%E8%B3%87%E6%96%99%E9%9C%80%E6%B1%82%E7%94%B3%E8%AB%8B%E6%9B%B8.docx">教學評量資料需求申請書</a></li>
+                <li><a href="https://docsacademic.fju.edu.tw/form/%E6%95%99%E5%AD%B8%E8%A9%95%E9%87%8F%E8%B3%87%E6%96%99%E9%9C%80%E6%B1%82%E7%94%B3%E8%AB%8B%E6%9B%B8.odt">教學評量資料需求申請書(odt)</a></li>
+            </ul>
+        </div>
+
+        <div class="texts">
+            <p>學生端：
+            <a href="https://assessment.fju.edu.tw/" target="_blank">https://assessment.fju.edu.tw/</a>
+            </p>
+            <p>教職員端：
+            <a href="https://assessmentmgt.fju.edu.tw/" target="_blank">https://assessmentmgt.fju.edu.tw/</a>
+            </p>
+        </div>
+</body>
+</html>

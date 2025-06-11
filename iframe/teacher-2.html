@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+        }
+
+        h1 {
+        font-size: 2rem;
+        border-bottom: 3px solid #0055aa;
+        padding-bottom: 10px;
+        color: #0055aa;
+        }
+
+        .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+        .card {
+        flex: 1 1 calc(50% - 20px);
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .unit-title p{
+        font-size: 1.5rem;
+        color: #222;
+        }
+
+        .unit-title {
+        font-size: 1.5rem;
+        color: #222;
+        border-left: 6px solid #0077cc;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        }
+
+        ul.service-list a{
+        text-decoration: underline;
+        color: rgb(26, 26, 26);
+        }
+
+        ul.service-list {
+        padding-left: 20px;
+        list-style-type: decimal;
+        }
+
+        @media screen and (max-width: 600px) {
+        .card {
+            flex: 1 1 100%;
+        }
+
+        .unit-title {
+            font-size: 1.2rem;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>教學獎勵</h1>
+
+    <div class="card-container">
+        <div class="card">
+        <div class="unit-title">一、教學成果獎勵</div>
+            <p>
+                為提升教學品質、積極改進教學方法與內容，並形成教學社群，輔仁大學推動教學成果獎勵，每學期開放申<br>
+                請，由「教學設計與互動評量委員會」進行申請案件審核，並舉辦教學成果獲獎教師分享活動，促進教師間<br>
+                在教學目標、策略等方面之對話，以議題導向規劃跨領域教師教學經驗分享。
+            </p>
+            <ul class="service-list">
+                <li><a href="http://docs.academic.fju.edu.tw/edulaw/teachfruit.pdf">教學成果獎辦法</a></li>
+                <li><a href="http://docs.academic.fju.edu.tw/form/teachapply.odt">教學成果獎申請表</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="unit-title">二、教師教學績優獎</div>
+            <p>
+                為鼓勵教學優秀教師，教務處每年發文至各院，由系院推薦優秀教師，並經過教評會三級三審制度，遴選<br>
+                獲教師教學績優教師。並於校務會議由校長親自授獎，鼓勵教師持續於教學領域的精進。
+            </p>
+            <ul class="service-list">
+                <li><a href="http://docs.academic.fju.edu.tw/edulaw/%E6%95%99%E5%B8%AB%E6%95%99%E5%AD%B8%E7%B8%BE%E5%84%AA%E7%8D%8E%E5%8B%B5%E8%BE%A6%E6%B3%95.pdf">教師教學績優獎獎勵辦法</a></li>
+                <li><a href="http://docs.academic.fju.edu.tw/form/teachrecomm.odt">教學績優教師獎勵推薦表</a></li>
+            </ul>
+        </div>
+</body>
+</html>
