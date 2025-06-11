@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
+        color: #333;
+        }
+
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
+        }
+
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+        background-color: #e2ecf7;
+        }
+
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
+        }
+
+        .footer-buttons {
+            text-align: center;
+            padding: 40px 20px;
+            background: #eef4ff;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .footer-buttons .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-buttons .button-group a {
+            background-color: #0077cc;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-buttons .button-group a:hover {
+            background-color: #005fa3;
+        }
+  </style>
+</head>
+
+<body>
+    <h1>教務處組織與職掌</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">教務長與副教務長</div>
+        <div class="accordion-content">
+        <table>
+            <tr><th>姓名</th><th>職稱</th><th>聯絡電話</th><th>E-mail</th></tr>
+            <tr><td>蔡宗佑學術特聘教授</td><td>教務長</td><td>2905-2217</td><td>academic@mail.fju.edu.tw</td></tr>
+            <tr><td>廖建翔教授</td><td>副教務長</td><td>2905-3102</td><td>052122@mail.fju.edu.tw</td></tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">處本部</div>
+        <div class="accordion-content">
+        <table>
+            <tr><th>工作內容</th><th>承辦人</th><th>職稱</th><th>連絡電話</th><th>E-mail</th></tr>
+            <tr>
+                <td>協調處內各組及校內外各單位相關業務<br>
+                    教務行事曆、大事紀要編列、彙整及管<br>
+                    控全處預算行政事務(接聽電話、教務<br>
+                    長行程安排、公文轉呈、教務處公文登<br>
+                    記桌)教務工作協調會、處務會議斐陶<br>
+                    斐榮譽學會相關作業工讀生管理與協調<br>
+                    畢業典禮事宜、籌劃校運會處代表隊全<br>
+                    處自強活動、期末聚餐全處教育訓練
+                </td>
+                <td>張啟聖</td>
+                <td>組員兼秘書</td>
+                <td>2905-2218</td>
+                <td>024059@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>教務會議籌辦、紀錄與決議案追蹤、法規修訂追蹤<br>
+                    中程計畫教務系統資訊化執行與填報<br>
+                    高教深耕計畫課程診斷與學習輔導<br>
+                    關鍵績效指標管理平台之管理<br>
+                    支援英語聽力測驗2次考試業務<br>
+                    支援分科測驗考試業務<br>
+                    支援學科能力測驗考試業務<br>
+                    臨時交辦事項
+                </td>
+                <td>陳惠芸</td>
+                <td>組員</td>
+                <td>2905-2303</td>
+                <td>053488@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>
+                    招生策略構思、執行與協調<br>
+                    支持招生宣傳及活動進行<br>
+                    籌備開箱日活動<br>
+                    支援分科測驗考試業務<br>
+                    臨時交辦事項
+                </td>
+                <td>徐崇婉	</td>
+                <td>組員</td>
+                <td>2905-2308</td>
+                <td>043649@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>
+                招生策略執行<br>
+                辦理招生策略諮詢委員會之業務<br>
+                安排天主教及全國重點高中多元選修課程<br>
+                教務處處本部財產管理<br>
+                臨時交辦事項
+                </td>
+                <td>于惠禎</td>
+                <td>組員</td>
+                <td>2905-3280</td>
+                <td>050964@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>
+                行政等校級會議各項資料之提報與執行情形追蹤<br>
+                教務處各單位業務報告彙整<br>
+                課程及教學相關計畫之申請與補助<br>
+                教務處網站資料維護<br>
+                臨時交辦事項
+                </td>
+                <td>尤文伶</td>
+                <td>組員</td>
+                <td>2905-2320</td>
+                <td>055769@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>
+                優化學習環境型塑學習氛圍計畫<br>
+                教務相關之教育部獎補助款之申請與核銷<br>
+                執行教育部高教深耕計畫永續國家隊業務<br>
+                管考重點高中學生入學與學習成效<br>
+                臨時交辦事項
+                </td>
+                <td>李佩珊</td>
+                <td>專職約聘</td>
+                <td>2905-3230</td>
+                <td>157591@mail.fju.edu.tw</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">招生組</div>
+        <div class="accordion-content">
+        <table>
+            <tr><th>工作內容</th><th>承辦人</th><th>職稱</th><th>連絡電話</th><th>E-mail</th></tr>
+            <tr>
+                <td>
+                    追蹤及彙整會議(董事會、教務工作協調會)<br>
+                    評鑑資料及執行情形<br>
+                    綜理招生組業務<br>
+                    協調跨單位之業務<br>
+                    規劃與統籌招生企劃<br>
+                    招生考試業務 <br>
+                    &nbsp;&nbsp;轉學生招生<br>
+                    &nbsp;&nbsp;碩士班招生
+                </td>
+                <td>陳翠華</td>
+                <td>組員兼組長</td>
+                <td>2905-3133</td>
+                <td>001616@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>
+                招生組業務綜合<br>
+                公文登記桌<br>
+                規劃招生標準作業程序(SOP)<br>
+                招生組內控<br>
+                招生資訊組電腦軟、硬體管理<br>
+                招生考試業務  <br>
+                &nbsp;&nbsp;僑生招生<br>
+                &nbsp;&nbsp;護理學系二年制在職專班招生<br>
+                &nbsp;&nbsp;碩士在職專班<br>
+                &nbsp;&nbsp;博碩甄招生<br>
+                &nbsp;&nbsp;博士班招生<br>
+                &nbsp;&nbsp;進修學士班轉學生招生
+                </td>
+                <td>朱家明	</td>
+                <td>組員</td>
+                <td>2905-3074</td>
+                <td>048767@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>
+                編列、彙整及管控全組預算、財產管理<br>
+                各項招生試務工作庶務綜合<br>
+                招生考試業務  <br>
+                &nbsp;&nbsp;碩士在職專班招生(含財法原住民碩在專班)<br>
+                &nbsp;&nbsp;國際創管在職專班招生<br>
+                &nbsp;&nbsp;碩士班招生<br>
+                &nbsp;&nbsp;天主教研修學士學位學程招生<br>
+                &nbsp;&nbsp;學士後護理學系<br>
+                &nbsp;&nbsp;兒童與家庭學系教保員學位學程專班
+                </td>
+                <td>許淑卿</td>
+                <td>組員</td>
+                <td>2905-3135</td>
+                <td>051316@mail.fju.edu.tw</td>
+            </tr>
+            <!--剩下還沒改完-->
+            <tr>
+                <td>
+                行政等校級會議各項資料之提報與執行情形追蹤<br>
+                教務處各單位業務報告彙整<br>
+                課程及教學相關計畫之申請與補助<br>
+                教務處網站資料維護<br>
+                臨時交辦事項
+                </td>
+                <td>尤文伶</td>
+                <td>組員</td>
+                <td>2905-2320</td>
+                <td>055769@mail.fju.edu.tw</td>
+            </tr>
+            <tr>
+                <td>
+                優化學習環境型塑學習氛圍計畫<br>
+                教務相關之教育部獎補助款之申請與核銷<br>
+                執行教育部高教深耕計畫永續國家隊業務<br>
+                管考重點高中學生入學與學習成效<br>
+                臨時交辦事項
+                </td>
+                <td>李佩珊</td>
+                <td>專職約聘</td>
+                <td>2905-3230</td>
+                <td>157591@mail.fju.edu.tw</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+
+
+    <div class="footer-buttons">
+    <div class="button-group">
+        <a href="https://www.fju.edu.tw" target="_blank">輔大首頁</a>
+        <a href="https://tms.fju.edu.tw" target="_blank">課務系統</a>
+        <a href="https://academic.fju.edu.tw" target="_blank">教務處網站</a>
+    </div>
+    </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+  </script>
+</body>
+</html>
