@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="iframe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>課程與選課類</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Q：什麼時候可以選課？選課流程是什麼？</div>
+        <div class="accordion-content">
+            選課通常分為初選、加退選和確認階段。每學期的選課時間請依教務處公告為準，
+            並透過學生資訊系統進行操作。如需詳細流程，請參考:<a href="">「選課與修課」</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Q:如果選錯課，可以退選或加選嗎？時間是什麼時候？</div>
+        <div class="accordion-content">
+            在加退選期間內，學生可自由進行課程異動；若過後仍需調整，需經由系所及授課
+            老師同意並辦理手動加選或退選。請密切留意教務處公告的加退選日期。
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Q:什麼是抵免學分？怎麼申請？</div>
+        <div class="accordion-content">
+            抵免是指申請將過去修過的課程學分認列為本校課程學分。通常在新生入學或轉學生報到
+            時開放申請，需繳交成績單與課程大綱，經系所審核後由教務處核定。
+            如需詳細流程，請參考:<a href="scores-1.html" target="_blank">「選課與修課」</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Q:實體課跟線上課怎麼區分？能混修嗎？</div>
+        <div class="accordion-content">
+            課程類型會在選課系統中標示（如：實體、同步線上、非同步線上），學生可依需求
+            選擇課程。部分課程可混合修習，但仍需依老師公告的授課方式為準。
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header"></div>
+        <div class="accordion-content">
+            <a href=""></a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Q:課程已滿怎麼加簽？需要老師同意嗎？</div>
+        <div class="accordion-content">
+            若課程人數額滿，需向授課老師申請加簽，取得簽章或通過系統審核後，依規定時間
+            內完成加簽程序。是否能加簽以老師與系所決定為準。
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
+</body>
+</html>

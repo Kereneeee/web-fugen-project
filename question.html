@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>成績/學分</title>
+  <link rel="icon" href="images/title_logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<header class="top-bar">
+    <div class="title">
+      <img src="images/天主教輔仁大學.png" alt="Logo" class="title-icon">
+      <a href="index.html">輔仁大學教務處</a>
+    </div>
+    <nav class="top-nav">
+      <a href="https://www.fju.edu.tw/">輔仁大學</a>
+      <a href="#">網站地圖</a>
+      <a href="about.html">本處簡介</a>
+      <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
+      <input type="text" placeholder="搜尋...">
+      <button>🔍</button>
+    </nav>
+  </header>
+
+    <nav class="main-nav">
+        <a href="#">課務選課</a>
+        <a href="calender.htm">行事曆</a>
+        <a href="scores.html">成績/學分</a>
+        <a href="money.html">註冊/繳費</a>
+        <a href="announcement.htm">最新公告</a>
+        <a href="#">畢業資格</a>
+        <a href="download.html">表單下載</a>
+        <a href="">常見問題</a>
+    </nav>
+
+  <!-- 主內容區域：左側 + 中間 iframe -->
+  <div class="container">
+    <div class="sidebar">
+      <div style="height: 15px;"></div>
+      <a href="iframe/question-1.html" target="contentFrame">&nbsp;&nbsp;課程與選課類</a>
+      <a href="" target="contentFrame">&nbsp;&nbsp;成績與學籍類</a>
+      <a href="" target="contentFrame">&nbsp;&nbsp;認證與證明文件類</a>
+      <a href="" target="contentFrame">&nbsp;&nbsp;雙主修、輔系與學分<br>&nbsp;&nbsp;學程類</a>
+      <a href="" target="contentFrame">&nbsp;&nbsp;其他常見問題</a>
+    </div>
+
+    <div class="main">
+      <iframe name="contentFrame" src="iframe/question-1.html"></iframe>
+    </div>
+  </div>
+</body>
