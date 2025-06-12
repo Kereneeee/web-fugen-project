@@ -2,108 +2,166 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>輔仁大學教務處</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-        font-family: "Microsoft JhengHei", sans-serif;
-        background-color: white;
-        margin: 40px;
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
         color: #333;
         }
 
-        .main-content {
-        max-width: 900px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        gap: 130px;
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+        
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
         }
 
-        .left-column,
-        .right-column {
-        flex: 1;
-        }
-
-
-        .section {
-        margin-bottom: 50px;
-        }
-
-        .section h2 {
-        font-size: 24px;
-        color: #1c1c1c;
-        margin-bottom: 15px;
-        }
-
-        .section p {
-        margin-left: 20px;
-        }
-
-        .section a {
-        text-decoration: none;
-        color: #0c60a5;
-        font-size: 18px;
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
         font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
         }
 
-        .section a::before {
-        content: "▸ ";
-        margin-right: 5px;
+        .accordion-header:hover {
+        background-color: #e2ecf7;
         }
 
-        .section a:hover {
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
         text-decoration: underline;
-        color: #003162;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
         }
     </style>
 </head>
+
 <body>
-    <div class="main-content">
-        <div class="left-column">
-            <div class="section">
-            <h2>學位證書</h2>
-            <p>
-                <a href="https://docsacademic.fju.edu.tw/about%20status/%E4%B8%AD%E6%96%87%E5%AD%B8%E4%BD%8D%E8%AD%89%E6%9B%B8%E9%81%BA%E5%A4%B1%E6%90%8D%E6%AF%80%E8%A3%9C%E7%99%BC%E4%BD%9C%E6%A5%AD.pdf"> 一、中文學位證書遺失補發作業</a><br>
-                <a href="https://docsacademic.fju.edu.tw/about%20status/%E6%A0%B8%E7%99%BC%E6%95%99%E8%82%B2%E5%AD%B8%E7%A8%8B%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf"> 二、核發教育學程證明書作業</a><br>
-                <a href="https://docsacademic.fju.edu.tw/about%20status/%E6%95%99%E8%82%B2%E5%AD%B8%E7%A8%8B%E8%AD%89%E6%98%8E%E6%9B%B8%E9%81%BA%E5%A4%B1%E6%90%8D%E6%AF%80%E8%A3%9C%E7%99%BC%E4%BD%9C%E6%A5%AD.pdf"> 三、教育學程證明書遺失補發作業</a><br>
-                <a href="https://docsacademic.fju.edu.tw/about%20status/%E7%94%B3%E8%AB%8B%E8%8B%B1%E6%96%87%E5%AD%B8%E4%BD%8D%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf"> 四、學生申請英文學位證明書作業</a><br>
-                <a href="">五-1、各類學歷證明書申請表(含補發)</a><br>
-                <a href=""> 五-2、各類學歷證明書申請表(odt)</a>
-            </p>
-            </div>
+    <h1>學籍</h1>
 
-            <div class="section">
-            <h2>個人資料異動</h2>
-            <p>
-                <a href=""> 一之1、個人資料異動</a><br>
-                <a href="">一之2、個人資料異動(odt)</a>
-            </p>
-            </div>
-        </div>
-
-        <div class="right-column">
-            <div class="section">
-            <h2>在學證明</h2>
-            <p><a href="https://docsacademic.fju.edu.tw/application/%E7%94%B3%E8%AB%8B%E4%B8%AD%E8%8B%B1%E6%96%87%E5%9C%A8%E5%AD%B8%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf"> 申請中英文在學證明書作業</a></p>
-            </div>
-
-            <div class="section">
-            <h2>修業證明書</h2>
-            <p><a href="">抵免科目申請表</a></p>
-            </div>
-
-            <div class="section">
-            <h2>學生證</h2>
-            <p><a href="https://docsacademic.fju.edu.tw/application/%E7%94%B3%E8%AB%8B%E8%A3%9C%E7%99%BC%E5%AD%B8%E7%94%9F%E8%AD%89%E4%BD%9C%E6%A5%AD.pdf"> 學生申請補發學生證（校園卡）作業</a></p>
-            </div>
-
-            <div class="section">
-            <h2>提高編級</h2>
-            <p><a href="">抵免科目申請表〈轉系生〉</a></p>
-            </div>
+    <div class="accordion-item">
+        <div class="accordion-header">個人資料異動</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%9B%B4%E6%94%B9%E5%80%8B%E4%BA%BA%E8%B3%87%E6%96%99%E7%94%B3%E8%AB%8B%E6%9B%B8.docx">一-1、個人資料異動</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%9B%B4%E6%94%B9%E5%80%8B%E4%BA%BA%E8%B3%87%E6%96%99%E7%94%B3%E8%AB%8B%E6%9B%B8.odt">一之2、個人資料異動(odt)</a>
+            
         </div>
     </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">學生證</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/application/%E7%94%B3%E8%AB%8B%E8%A3%9C%E7%99%BC%E5%AD%B8%E7%94%9F%E8%AD%89%E4%BD%9C%E6%A5%AD.pdf">學生申請補發學生證（校園卡）作業</a>     
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">在學證明</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/application/%E7%94%B3%E8%AB%8B%E4%B8%AD%E8%8B%B1%E6%96%87%E5%9C%A8%E5%AD%B8%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf">申請中英文在學證明書作業</a>
+            
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">學位證書</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20status/%E4%B8%AD%E6%96%87%E5%AD%B8%E4%BD%8D%E8%AD%89%E6%9B%B8%E9%81%BA%E5%A4%B1%E6%90%8D%E6%AF%80%E8%A3%9C%E7%99%BC%E4%BD%9C%E6%A5%AD.pdf">一、中文學位證書遺失（損毀）補發作業</a>
+            <a href="https://docsacademic.fju.edu.tw/about%20status/%E6%A0%B8%E7%99%BC%E6%95%99%E8%82%B2%E5%AD%B8%E7%A8%8B%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf">二、核發教育學程證明書作業</a>
+            <a href="https://docsacademic.fju.edu.tw/about%20status/%E6%95%99%E8%82%B2%E5%AD%B8%E7%A8%8B%E8%AD%89%E6%98%8E%E6%9B%B8%E9%81%BA%E5%A4%B1%E6%90%8D%E6%AF%80%E8%A3%9C%E7%99%BC%E4%BD%9C%E6%A5%AD.pdf">三、教育學程證明書遺失（損毀）補發作業</a>
+            <a href="https://docsacademic.fju.edu.tw/about%20status/%E7%94%B3%E8%AB%8B%E8%8B%B1%E6%96%87%E5%AD%B8%E4%BD%8D%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf">四、學生申請英文學位證明書作業</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E5%90%84%E9%A1%9E%E5%AD%B8%E6%AD%B7%E8%AD%89%E6%98%8E%E6%9B%B8%E7%94%B3%E8%AB%8B%E8%A1%A8%E5%90%AB%E8%A3%9C%E7%99%BC.docx">五-1、各類學歷證明書申請表(含補發)</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E5%90%84%E9%A1%9E%E5%AD%B8%E6%AD%B7%E8%AD%89%E6%98%8E%E6%9B%B8%E7%94%B3%E8%AB%8B%E8%A1%A8%E5%90%AB%E8%A3%9C%E7%99%BC.odt">五-2、各類學歷證明書申請表(odt)</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">修業證明書</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20status/%E7%94%B3%E8%AB%8B%E8%A3%9C%E4%BF%AE%E5%AD%B8%E5%88%86%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf">一、學生申請補修學分證明書作業</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E5%BB%B6%E9%95%B7%E4%BF%AE%E6%A5%AD%E8%AD%89%E6%98%8E%E6%9B%B8.docx">二-1、補修學分證明書</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E5%BB%B6%E9%95%B7%E4%BF%AE%E6%A5%AD%E8%AD%89%E6%98%8E%E6%9B%B8.odt">二-2、補修學分證明書(odt)</a>
+            <a href="https://docsacademic.fju.edu.tw/application/%E7%94%B3%E8%AB%8B%E8%BD%89%E5%AD%B8%E4%BF%AE%E6%A5%AD%E8%AD%89%E6%98%8E%E6%9B%B8%E4%BD%9C%E6%A5%AD.pdf">三、學生申請轉學修業證明書作業</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">提高編級</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20graduate/%E7%94%B3%E8%AB%8B%E6%8F%90%E9%AB%98%E7%B7%A8%E7%B4%9A%E4%BD%9C%E6%A5%AD.pdf">一、學生申請提高編級作業</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%8A%B5%E5%85%8D%E7%A7%91%E7%9B%AE%E7%94%B3%E8%AB%8B%E8%A1%A8.doc">二、抵免科目申請表</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%8F%90%E9%AB%98%E7%B7%A8%E7%B4%9A%E7%94%B3%E8%AB%8B%E6%9B%B8.docx">三-1、提高編級申請單</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%8F%90%E9%AB%98%E7%B7%A8%E7%B4%9A%E7%94%B3%E8%AB%8B%E6%9B%B8.odt">三-2、提高編級申請單(odt)</a>
+            
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
 </body>
+</html>

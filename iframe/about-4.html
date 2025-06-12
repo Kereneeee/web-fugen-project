@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
+        color: #333;
+        }
+
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
+        }
+
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+        background-color: #e2ecf7;
+        }
+
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
+        text-decoration: underline;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
+        }
+  </style>
+</head>
+
+<body>
+    <h1>行政作業流程</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">處本部</div>
+        <div class="accordion-content">
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=1&labelID=25&subLabelID=554&fileID=3">1.輔仁大學陸生參與專任教師研究計畫之申請流程</a>
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=1&labelID=25&subLabelID=554&fileID=4"> 2.輔仁大學課程與教學相關計畫配合款補助作業流程</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">招生</div>
+        <div class="accordion-content">
+            <a href="https://exam.fju.edu.tw/admission/SOP" target="_blank">招生報名SOP</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">註冊(學籍、成績)</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/application/教務自動化服務系統收費項目.pdf">1.教務自動化服務系統收費項目</a>
+            <a href="https://docsacademic.fju.edu.tw/application/新生申請保留入學資格作業.pdf">2.申請保留入學</a>
+            <a href="https://docsacademic.fju.edu.tw/application/學生申請休學作業.pdf">3.申請休學</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請提高編級作業.pdf">4.申請提高編級</a>
+            <a href="https://docsacademic.fju.edu.tw/application/學生申請抵免科目作業.pdf">5.申請學分抵免</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請補發學生證作業.pdf">6.申請補發學生證</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請中英文在學證明書作業.pdf">7.申請在學證明</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請中文成績單作業.pdf">8.申請中文成績單</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請英文成績單作業.pdf">9.申請英文成績單</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請更改基本資料作業.pdf">10.學生更改身分證字號姓名或出生年月日作業</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請修讀輔系作業.odt">11.申請修讀輔系</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請修讀雙主修作業.odt">12.申請修讀雙主修</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請學分學程作業.odt">13.申請學分學程</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請轉系作業.pdf">14.申請修讀轉系</a>
+            <a href="https://docsacademic.fju.edu.tw/application/學生復學作業(含提前復學).pdf">15.申請復學(含提前復學)</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請提前畢業作業.pdf">16.申請提前畢業</a>
+            <a href="https://docsacademic.fju.edu.tw/application/中文學位證書遺失損毀補發作業.pdf">17.證書遺失損毀補發</a>
+            <a href="https://docsacademic.fju.edu.tw/application/申請英文學位證明書作業.pdf">18.申請英文學位證明書</a>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">課務(含試務)</div>
+        <div class="accordion-content">
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=1&labelID=25&subLabelID=557&fileID=1">1.1課程規劃作業及流程圖</a>
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=1&labelID=25&subLabelID=557&fileID=2">2.1網路開課作業流程圖</a>
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=1&labelID=25&subLabelID=557&fileID=3">3.1選課作業及流程圖</a>
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=1&labelID=25&subLabelID=557&fileID=4">4.1暑期班開班作業及流程圖</a>
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=1&labelID=25&subLabelID=557&fileID=5">5.1校內考試作業及流程圖</a>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">教師發展與教學資源中心</div>
+        <div class="accordion-content">
+            <a href="http://www.teachers.fju.edu.tw/index.php?option=com_content&task=view&id=79&Itemid=73">教師發展與教學資源中心</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
+</body>
+</html>

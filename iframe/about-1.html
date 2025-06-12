@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+        }
+
+        h1 {
+        font-size: 2rem;
+        border-bottom: 3px solid #0055aa;
+        padding-bottom: 10px;
+        color: #0055aa;
+        }
+
+        .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+        .card {
+        flex: 1 1 calc(50% - 20px);
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .unit-title {
+        font-size: 1.5rem;
+        color: #222;
+        border-left: 6px solid #0077cc;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        }
+
+        .unit-title a{
+        text-decoration: underline;
+        color: black;
+        }
+
+        ul.service-list {
+        padding-left: 20px;
+        list-style-type: decimal;
+        }
+
+        .intro-box {
+        background: #f2f8ff;
+        padding: 50px;
+        border-left: 6px solid #0055aa;
+        margin-top: 30px;
+        border-radius: 10px;
+        text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+        .card {
+            flex: 1 1 100%;
+        }
+
+        .unit-title {
+            font-size: 1.2rem;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>本處簡介</h1>
+    <div class="intro-box">
+        大學教育在於培育優秀人才，本校人才培育之核心在教學。教務處為辦理本校「教與學」相關業務之核心行政單位，<br>
+        設有註冊組、課務組、招生組、教師發展與教學資源中心、外語教學與數位學習資源中心及創意設計中心等6單位，以<br>
+        提供全體師生一個多元化與優質化的教學與學習環境。本處同仁配合學校中長程發展，學校「高教深耕計畫」之執行，<br>
+        規劃並推動具體措施，以提昇教師教學品質及學生學習效果。
+    </div>
+    <div style="height: 50px;"></div>
+
+    <h1>本處各單位服務項目</h1>
+
+    <div class="card-container">
+        <div class="card">
+        <div class="unit-title">註冊組</div>
+            <ul class="service-list">
+                <li>辦理招生報到事宜</li>
+                <li>辦理學生註冊事宜</li>
+                <li>辦理保留入學資格作業</li>
+                <li>製發學生證及遺失補換發事宜</li>
+                <li>辦理學生抵免與分發作業</li>
+                <li>辦理學生轉系事宜</li>
+                <li>辦理輔系、雙主修、學分學程申請作業</li>
+                <li>辦理休學、退學、轉學申請</li>
+                <li>辦理更改姓名、年籍異動作業</li>
+                <li>審查應屆畢業生資格及核發學位證書</li>
+                <li>學籍相關服務系統作業（申請成績單、在學證明等文件）</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="unit-title">課務組</div>
+                <ul class="service-list">
+                    <li>開選課作業</li>
+                    <li>暑修作業</li>
+                    <li>校際選課（含出國留學、交換生、國外選課）</li>
+                    <li>召開校課程委員會審查作業</li>
+                    <li>授課教師申請課程的作業</li>
+                    <li>上課調度及監控作業</li>
+                    <li>教師請假補課作業</li>
+                    <li>碩博士學位考試口試委員發聘作業</li>
+                    <li>期中、期末（畢業）及補考考試相關作業</li>
+                </ul>
+        </div>
+
+        <div class="card">
+            <div class="unit-title">招生組</div>
+                <ul class="service-list">
+                    <li>編印招生簡介及文宣資料</li>
+                    <li>籌辦各項招生博覽會之宣傳活動</li>
+                    <li>接待國內高中生來校參訪</li>
+                    <li>安排赴國內高中舉辦招生說明會</li>
+                    <li>推廣境外招生並辦理僑生、陸生之入學申請</li>
+                    <li>擬訂招生辦法及招生簡章</li>
+                    <li>辦理招生報名、考試、放榜等業務</li>
+                    <li>招生資訊之統計與分析</li>
+                    <li>招生宣導及文宣製作獎補助</li>
+                    <li>其他有關招生之業務</li>
+                </ul>
+        </div>
+
+        <div class="card">
+            <div class="unit-title"><a href="http://www.teachers.fju.edu.tw/FDIRC/">教師發展與教學資源中心</a></div>
+                <ul class="service-list">
+                    <li>辦理教師專業成長社群、教師成長系列活動</li>
+                    <li>推廣教學經驗分享</li>
+                    <li>提供教師專業教學錄影</li>
+                    <li>培訓教學助理及辦理增能工作坊</li>
+                    <li>持續推動高教深耕計畫</li>
+                    <li>辦理教學成效評量制度</li>
+                </ul>
+        </div>
+
+        <div class="card">
+            <div class="unit-title"><a href="about:blank">外語教學與數位學習資源中心</a></div>
+                <ul class="service-list">
+                    <li>整合規劃全校外語語言教學之軟硬體設備，及外語教學教室之管理。</li>
+                    <li>支援外語遠距教學課程及相關數位課程所需之技術與設備。</li>
+                    <li>提供教學科技與相關資源，協助教師提升教學品質，增進學生學習成效。</li>
+                    <li>推動多媒體化外語教學。</li>
+                    <li>豐富學生外語學習自學資源。</li>
+                    <li>充實外語視聽教學資料之典藏與流通。</li>
+                </ul>
+        </div>
+
+        <div class="card">
+            <div class="unit-title"><a href="https://cdc.fju.edu.tw/">創意設計中心</a></div>
+                <ul class="service-list">
+                    <li>結合健康照護、醫療與設計，成為各領域新創設計師的交流生態圈 (Innovative Designers Ecosystem)。</li>
+                    <li>辦理「動態資訊視覺設計」微學分學程。</li>
+                    <li>辦理「體感互動設計」微學分學程。</li>
+                    <li>辦理創意設計相關活動、講座、工作坊、產學合作，激發學生多元創造力，落實學用合一。</li>
+                    <li>「AR/MR 創新應用實驗室」進駐，發展輔大未來以醫療和設計為特色的大學，打造智慧校園。</li>
+                    <li>推廣新創設計師平台，讓世界看見輔大的設計能量。</li>
+                    <li>整合相關設計資源，設置 VR 虛擬實境/體感互動電視牆。</li>
+                    <li>設立 3D 列印自造中心，縮短新創產品開發流程。</li>
+                </ul>
+        </div>
+
+    </div>
+</body>
+</html>

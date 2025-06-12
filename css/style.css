@@ -59,6 +59,11 @@ body {
   vertical-align: middle;
 }
 
+.top-nav a:hover {
+  color: #b7e0ff;
+  text-decoration: none;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-evenly;
