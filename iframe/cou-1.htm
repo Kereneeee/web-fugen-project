@@ -2,79 +2,146 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>輔仁大學教務處</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-        font-family: "Microsoft JhengHei", sans-serif;
-        background-color: white;
-        margin: 40px;
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
         color: #333;
         }
 
-        .main-content {
-        max-width: 900px;
-        margin: 20px;
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+        
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
         }
 
-        .section {
-        margin-bottom: 10px;
-        }
-
-        .section h2 {
-        font-size: 24px;
-        color: #1c1c1c;
-        margin-bottom: 15px;
-        }
-
-        .section p {
-        margin-left: 20px;
-        }
-
-        .section a {
-        text-decoration: none;
-        color: #0c60a5;
-        font-size: 18px;
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
         font-weight: bold;
-        padding-bottom: 10px;
-        display: inline-block; 
-        width: 100%;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
         }
 
-        .section a::before {
-        content: "▸ ";
-        margin-right: 5px;
+        .accordion-header:hover {
+        background-color: #e2ecf7;
         }
 
-        .section a:hover {
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
         text-decoration: underline;
-        color: #003162;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
         }
     </style>
 </head>
-<body>
-    <div class="main-content">
-        <div class="left-column">
-            <div class="section">
-            <h2>教學開課流程與說明</h2>
-            <p>
-                <a href="https://docsacademic.fju.edu.tw/about%20course/%E8%AA%B2%E7%A8%8B%E8%A6%8F%E5%8A%83%E4%BD%9C%E6%A5%AD%E5%8F%8A%E6%B5%81%E7%A8%8B%E5%9C%96.pdf">課程規劃作業及流程圖</a><br>
-                <a href="https://docsacademic.fju.edu.tw/about%20course/%E7%B6%B2%E8%B7%AF%E9%96%8B%E8%AA%B2%E4%BD%9C%E6%A5%AD%E6%B5%81%E7%A8%8B%E5%9C%96.pdf">網路開課作業流程圖</a><br>
-                <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=2&labelID=26&subLabelID=654&fileID=2">彈性課程開班申請作業說明</a>
-            </p>
-            </div>
 
-            <h2>教學開課流程與說明</h2>
-            <p>
-                <a href="http://estu.fju.edu.tw/fjucourse/ava_form.asp">開課資料查詢</a><br>
-                <a href="https://outline.fju.edu.tw/#/outLineSearch/searchView">課程大綱暨教材系統查詢-學生</a><br>
-                <a href="https://outline.fju.edu.tw/#/login">課程大綱暨教材系統上傳-教師/行政</a><br>
-                <a href="http://140.136.251.63/CourseWeb/HomeIndex.aspx">開課系統</a><br>
-            </p>
-            </div>            
+<body>
+    <h1>教師教學與開課</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">教學開課流程與說明</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20course/%E8%AA%B2%E7%A8%8B%E8%A6%8F%E5%8A%83%E4%BD%9C%E6%A5%AD%E5%8F%8A%E6%B5%81%E7%A8%8B%E5%9C%96.pdf">課程規劃作業及流程圖</a>
+            <a href="https://docsacademic.fju.edu.tw/about%20course/%E7%B6%B2%E8%B7%AF%E9%96%8B%E8%AA%B2%E4%BD%9C%E6%A5%AD%E6%B5%81%E7%A8%8B%E5%9C%96.pdf">網路開課作業流程圖</a>
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=2&labelID=26&subLabelID=654&fileID=2">彈性課程開班申請作業說明</a>
+        </div>                  
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header"> 開課系統連結</div>
+        <div class="accordion-content">
+            <a href="http://estu.fju.edu.tw/fjucourse/ava_form.asp">開課資料查詢</a>
+            <a href="https://outline.fju.edu.tw/#/outLineSearch/searchView">課程大綱暨教材系統查詢-學生</a>
+            <a href="https://outline.fju.edu.tw/#/login">課程大綱暨教材系統上傳-教師/行政</a>
+            <a href="http://140.136.251.63/CourseWeb/HomeIndex.aspx">開課系統</a>
+        </div>         
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header"> 開課作業表單</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/form/%E6%95%99%E5%B8%AB%E6%8E%88%E8%AA%B2%E8%AD%89%E6%98%8E%E6%9B%B8%E7%94%B3%E8%AB%8B%E8%A1%A8.doc">教師授課證明書申請表</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E8%87%AA%E4%B8%BB%E5%AD%B8%E7%BF%92%E9%96%8B%E8%AA%B2%E8%A8%88%E7%95%AB%E6%9B%B8.docx">自主學習專業課程開課計畫書</a>
+            <a href="https://docsacademic.fju.edu.tw/form/%E9%96%8B%E8%AA%B2%E5%96%AE%E4%BD%8D%E9%80%81%E5%8D%B0%E5%96%AE.doc">開課單位送印單</a>
+        </div>         
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">法規與規範</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/edulaw/%E8%AA%B2%E5%A7%94%E6%9C%83%E8%A8%AD%E7%BD%AE%E8%BE%A6%E6%B3%95.pdf">輔仁大學課程委員會設置辦法</a>
+            <a href="https://docsacademic.fju.edu.tw/edulaw/coursepritimelaw.pdf">輔仁大學開課原則及教師授課鐘點計算辦法</a>
+        </div>         
+    </div>     
+
 
         </div>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
 </body>
+</html>

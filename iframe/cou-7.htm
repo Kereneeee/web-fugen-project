@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
+        color: #333;
+        }
+
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+        
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
+        }
+
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+        background-color: #e2ecf7;
+        }
+
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
+        text-decoration: underline;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>其他法規與會議紀錄</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">就學役男法規</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/edulaw/%E5%AD%B8%E5%A3%AB%E7%8F%AD%E5%B0%B1%E5%AD%B8%E6%9C%9F%E9%96%93%E6%9C%8D%E5%8B%99%E5%BD%88%E6%80%A7%E4%BF%AE%E6%A5%AD%E5%AF%A6%E6%96%BD%E8%A6%81%E9%BB%9E.pdf">輔仁大學學士班學生就學期間服役彈性修業實施要點</a>
+        </div>                  
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">校課程委員會議紀錄</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20course/11201%E6%A0%A1%E8%AA%B2%E5%A7%94%E6%9C%83%E6%9C%83%E8%AD%B0%E7%B4%80%E9%8C%84.pdf">112學年度第1次校課委會會議紀錄</a>
+            <a href="https://docsacademic.fju.edu.tw/about%20course/11102%E6%A0%A1%E8%AA%B2%E5%A7%94%E6%9C%83%E6%9C%83%E8%AD%B0%E7%B4%80%E9%8C%84.pdf">111學年度第2次校課委會會議紀錄</a>
+        </div>         
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header"> 產學實習相關紀錄</div>
+        <div class="accordion-content">
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=2&labelID=29&subLabelID=870&fileID=5">113學年度第1學期產業實習暨產學合作委員會紀錄</a>
+            <a href="https://academic.fju.edu.tw/DownloadSubLabelFileServlet?menuID=2&labelID=29&subLabelID=863&fileID=2">教育部公文：安全、性平、實習場所規範</a>
+        </div>         
+    </div>
+
+
+   
+
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
+</body>
+</html>

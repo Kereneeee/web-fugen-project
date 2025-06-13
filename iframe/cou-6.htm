@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+        font-family: "Noto Sans TC", sans-serif;
+        background: #f5f8fc;
+        margin: 0;
+        padding: 40px;
+        color: #333;
+        }
+
+        h1 {
+        text-align: center;
+        color: #0055aa;
+        margin-bottom: 40px;
+        }
+        
+        .accordion-item {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        overflow: hidden;
+        }
+
+        .accordion-header {
+        background-color: #f0f4fa;
+        color: #003366;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+        background-color: #e2ecf7;
+        }
+
+        .accordion-header::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 20px; 
+        text-align: center;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        }
+
+
+        .accordion-header.active::after {
+        transform: rotate(180deg);
+        }
+
+        .accordion-content {
+        display: none;
+        padding: 20px 24px;
+        background-color: #f9fcff;
+        }
+
+        .accordion-content a{
+        color: #00477d;
+        display: block;
+        margin-bottom: 8px;
+        text-decoration: underline;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        }
+
+        th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ccc;
+        }
+
+        th {
+        background-color: #eef4ff;
+        color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>學位考試申請作業</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">流程說明</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/about%20course/%E7%A2%A9%E5%8D%9A%E7%94%9F%E5%AD%B8%E8%A1%93%E5%80%AB%E7%90%86%E6%95%99%E8%82%B2%E8%AA%B2%E7%A8%8B%E4%BF%AE%E8%AA%B2%E8%AD%89%E6%98%8E.pdf"> 自106學年度起入學之碩博班學生-口考前須知</a>
+        </div>                  
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">作業系統</div>
+        <div class="accordion-content">
+            <a href="http://140.136.251.56/fujenTS/">碩博士學位口試申請-學生</a>
+            <a href="http://140.136.251.56/fjuadm/login.aspx">碩博士學位口試申請-行政</a>
+        </div>         
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">法規與規範</div>
+        <div class="accordion-content">
+            <a href="https://docsacademic.fju.edu.tw/edulaw/%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8%E5%AD%B8%E4%BD%8D%E8%80%83%E8%A9%A6%E8%BE%A6%E6%B3%95.pdf">輔仁大學博士班、碩士班研究生學位考試辦法</a>
+            <a href="https://docsacademic.fju.edu.tw/edulaw/%E5%AD%B8%E4%BD%8D%E6%8E%88%E4%BA%88%E6%B6%89%E5%8F%8A%E6%8A%84%E8%A5%B2%E8%88%9E%E5%BC%8A%E8%99%95%E7%90%86%E8%BE%A6%E6%B3%95.pdf">輔仁大學學位授予涉及抄襲舞弊處理辦法</a>
+        </div>
+    </div>
+
+
+
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $('.accordion-header').click(function () {
+      $(this).toggleClass('active');
+      $(this).next('.accordion-content').slideToggle(200);
+      $('.accordion-header').not(this).removeClass('active');
+      $('.accordion-content').not($(this).next()).slideUp(200);
+    });
+    </script>
+</body>
+</html>

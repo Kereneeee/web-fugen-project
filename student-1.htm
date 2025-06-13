@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>學生專區</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.top-bar {
+  background-color: #096db0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  height: 70px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.title a {
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+}
+
+.title-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.top-nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+.top-nav input {
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.top-nav button {
+  padding: 5px 10px;
+  background-color: white;
+  color: #0c60a5;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #e0e0e0;
+  padding: 10px 0;
+}
+
+.main-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 1000;
+  font-size: 18px;
+}
+
+.student-body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #e9ecf2;
+  margin: 0;
+  padding: 2rem;
+  height: 750px;
+}
+
+.student-body h1 {
+  font-size: 28px;
+  color: #096db0;
+  margin-bottom: 0px;
+  margin-left: 25px;
+  margin-top: 0px;
+}
+
+.student-body .container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.student-body .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.student-body .card {
+  background: #fff;
+  border: 1px solid #cacdd6;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  width: 400px;
+  text-align: center;
+}
+
+.student-body .card h2 {
+  font-size: 16px;
+  background-color: #8892a9;
+  color: white;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  padding: 0.5rem 10rem;
+  border-radius: 8px;
+}
+
+/* 由表格修改為2欄按鈕式 */
+.student-body .link-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.student-body .link-table > li {
+  position: relative;
+  background: #f5f7fa;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.student-body .link-table > li > a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.student-body .link-table > li > a:hover {
+  color: #096db0;
+  text-decoration: underline;
+}
+
+.student-body .link-table .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  min-width: 160px;
+  z-index: 100;
+  border-radius: 6px;
+}
+
+.student-body .link-table > li:hover .dropdown {
+  display: block;
+}
+
+.student-body .link-table .dropdown li {
+  margin-bottom: 5px;
+}
+
+.student-body .link-table .dropdown li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.student-body .link-table .dropdown li a:hover {
+  color: #096db0;
+  text-decoration: underline;
+}
+
+    .student-body .sidebar {
+      width: 240px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      height: fit-content;
+      text-align: center;
+      margin-top: 25px;
+    }
+    .student-body .sidebar h2 {
+      font-size: 18px;
+      color: #00416b;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+    .student-body .sidebar hr {
+      height: 0;
+      border: none;
+      border-top: 2px solid #00416b;
+      margin: 0.5rem 0;
+    }
+    .student-body .sidebar a {
+      display: block;
+      color: #00416b;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      line-height: 2;
+    }
+    .student-body .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+</style>
+</head>
+<body>
+<div>
+<header class="top-bar">
+  <div class="title">
+    <img src="images/天主教輔仁大學.png" alt="Logo" class="title-icon">
+    <a href="index.html">輔仁大學教務處</a>
+  </div>
+  <nav class="top-nav">
+    <a href="">輔仁大學</a>
+    <a href="">網站地圖</a>
+    <a href="">本處簡介</a>
+    <a href=""> <i class="fa-solid fa-earth-asia"></i></a>
+    <input type="text" placeholder="搜尋...">
+    <button>🔍</button>
+  </nav>
+</header>
+
+<nav class="main-nav">
+  <a href="">課務選課</a>
+  <a href="">行事曆</a>
+  <a href="">成績/學分</a>
+  <a href="">註冊/繳費</a>
+  <a href="">最新公告</a>
+  <a href="">畢業資格</a>
+  <a href="">表單下載</a>
+  <a href="">常見問題</a>
+</nav>
+</div>
+
+<div class="student-body">
+<h1>學生專區</h1>
+<div class="container">
+  <div class="cards">
+    <div class="card">
+      <h2>跨領域學習</h2>
+      <ul class="link-table">
+        <li>
+          <a href="">雙主修</a>
+          <ul class="dropdown">
+            <li><a href="">詳細說明</a></li>
+            <li><a href="">申請表</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">超修</a>
+          <ul class="dropdown">
+            <li><a href="">條件</a></li>
+            <li><a href="">申請方式</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">轉系</a>
+          <ul class="dropdown">
+            <li><a href="">申請時間</a></li>
+            <li><a href="">所需文件</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">停修</a>
+          <ul class="dropdown">
+            <li><a href="">申請條件</a></li>
+            <li><a href="">後果說明</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">學分學程</a>
+          <ul class="dropdown">
+            <li><a href="">開設學程</a></li>
+            <li><a href="">申請方式</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">輔系必修科目表</a>
+          <ul class="dropdown">
+            <li><a href="">必修清單</a></li>
+            <li><a href="">學分說明</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://interdisciplinary.fju.edu.tw/">跨領域學習網站</a>
+        </li>
+        <li>
+          <a href="">重修/超修</a>
+          <ul class="dropdown">
+            <li><a href="">申請時間</a></li>
+            <li><a href="">限制說明</a></li>
+          </ul>
+        </li>
+      </ul>               
+    </div>
+  </div><!-- cards -->
+        <div class="sidebar">
+        <hr>
+        <h2>常用連結</h2>
+        <hr>
+        <a href="https://sis.fju.edu.tw/#/">學生資訊平台</a>
+        <a href="https://portal.fju.edu.tw/student/">學生資訊入口網</a>
+        <a href="http://smis.fju.edu.tw/freshman/login.aspx">學生資訊管理系統</a>
+        <a href="calender.htm">行事曆</a>
+        <a href="https://course.fju.edu.tw/">選課資訊網</a>
+        <a href="https://whoami.fju.edu.tw/ac_start.php">單一帳號(LDAP)啟動網站</a>
+        <a href="https://assessment.fju.edu.tw/#/login">教學評量入口</a>
+        <a href="http://www.hec.fju.edu.tw/">全人教育課程中心</a>
+      </div><!-- sidebar -->
+
+    </div><!-- container -->
+  </div><!-- student-body -->
+
+</body>
+</html>
+</div><!-- container -->
+</div><!-- student-body -->
+
+</body>
+</html>
