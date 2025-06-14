@@ -152,7 +152,10 @@ body {
 .right {
   width: 40%;
   padding: 20px;
-  /*margin-top: 53px;*/
+}
+
+.right iframe{
+  height: 475px;
 }
 
 .ann_title {
@@ -286,13 +289,14 @@ iframe {
 /*尾頁設定*/
 .footer-links {
   background-color: #ffffff;
-  padding: 40px 20px;
+  padding: 40px 50px;
   text-align: left;
 }
 
 .footer-links h3 {
   font-size: 20px;
   font-weight: bold;
+  margin-top: 0;
   margin-bottom: 20px;
   color: #444;
 }
@@ -327,6 +331,34 @@ footer{
     left: 0;
     margin-top: 50px;
 }
+
+footer .bottom{
+  background-color: #096db0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  height: 150px;
+  display: flex;
+  align-items: center;      /* 垂直置中 */
+  justify-content: center;  /* 水平置中 */
+  gap: 150px;                 /* 每块之间有20px空隙 */
+  padding: 20px;  
+}
+
+footer .bottom a {
+text-decoration: none;
+color: #ffffff;
+}
+
+footer .bottom a:hover {
+  font-weight: bold;
+  color:#032745;
+  text-decoration: underline;
+}
+
+
 
 
 /*ifram的版型設計*/
