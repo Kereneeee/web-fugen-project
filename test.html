@@ -1,135 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>藍色風格六區塊網頁</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Microsoft JhengHei", sans-serif;
-      background-color: #e6f0fa;
-      color: #033e6b;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background-color: #ffffff;
-      border: 2px solid #7ab8f5;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #045a9c;
-      border-bottom: 1px solid #7ab8f5;
-      padding-bottom: 10px;
-    }
-
-    .card ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0 0 0;
-    }
-
-    .card ul li a {
-      text-decoration: none;
-      color: #045a9c;
-      display: block;
-      padding: 6px 0;
-      transition: color 0.2s;
-    }
-
-    .card ul li a:hover {
-      color: #012a52;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <title>畢業資格</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-  <div class="container">
-    <div class="card">
-      <h3>區塊一</h3>
-      <ul>
-        <li><a href="#">連結一</a></li>
-        <li><a href="#">連結二</a></li>
-        <li><a href="#">連結三</a></li>
-        <li><a href="#">連結四</a></li>
-        <li><a href="#">連結五</a></li>
-      </ul>
+    <header class="top-bar">
+        <div class="title"><img src="images/天主教輔仁大學.png" alt="Logo" class="title-icon">
+            <a href="index.html">輔仁大學教務處</a>
+        </div>
+        <nav class="top-nav">
+            <a href="https://www.fju.edu.tw/">輔仁大學</a>
+            <a href="https://portal.fju.edu.tw/student/">學生資訊網</a>
+            <a href="about.html">本處簡介</a>
+            <div class="language-dropdown">
+            <a href="#" class="language-icon"><i class="fa-solid fa-earth-asia"></i></a>
+            <div class="dropdown-content">
+                <a href="?lang=zh">中文</a>
+                <a href="?lang=en">English</a>
+            </div>
+            </div>
+            <input type="text" placeholder="搜尋...">
+            <button>🔍</button>
+        </nav>
+    </header>
+
+    <nav class="main-nav">
+    <div class="dropdown">
+        <a href="stu-exam.htm">課務選課</a>
+        <div class="dropdown-menu">
+        <a href="stu-exam.htm?src=iframe/cou-1.htm">教學與開課</a>
+        <a href="stu-exam.htm?src=iframe/cou-2.htm">選課與修課</a>
+        <a href="stu-exam.htm?src=iframe/cou-3.htm">校際選課</a>
+        <a href="stu-exam.htm?src=iframe/cou-4.htm">特殊學習課程</a>
+        <a href="stu-exam.htm?src=iframe/cou-5.htm">期中學期考試作業</a>
+        <a href="stu-exam.htm?src=iframe/cou-6.htm">學位考試申請作業</a>
+        <a href="stu-exam.htm?src=iframe/cou-7.htm">會議紀錄</a>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>區塊二</h3>
-      <ul>
-        <li><a href="#">連結一</a></li>
-        <li><a href="#">連結二</a></li>
-        <li><a href="#">連結三</a></li>
-      </ul>
+    <div class="dropdown">
+        <a href="calender.htm">行事曆</a>
+        <div class="dropdown-menu">
+        <a href="calender.htm">行事曆</a>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>區塊三</h3>
-      <ul>
-        <li><a href="#">連結一</a></li>
-        <li><a href="#">連結二</a></li>
-      </ul>
+    <div class="dropdown">
+        <a href="scores.html">成績/學分</a>
+        <div class="dropdown-menu">
+        <a href="scores.html?src=iframe/scores-1.html">學分抵免</a>
+        <a href="scores.html?src=iframe/scores-2.html">系所專區</a>
+        <a href="scores.html?src=iframe/scores-4.html">教務法規</a>
+        <a href="scores.html?src=iframe/scores-3.html">教師專區</a>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>區塊四</h3>
-      <ul>
-        <li><a href="#">連結一</a></li>
-        <li><a href="#">連結二</a></li>
-        <li><a href="#">連結三</a></li>
-        <li><a href="#">連結四</a></li>
-      </ul>
+    <div class="dropdown">
+        <a href="money.html">註冊/繳費</a>
+        <div class="dropdown-menu">
+        <a href="money.html?src=iframe/money-1.html">學籍</a>
+        <a href="money.html?src=iframe/money-2.html">註冊須知</a>
+        <a href="money.html?src=iframe/money-3.html">畢業審核</a>
+        <a href="money.html?src=iframe/money-4.html">離校(含休、退學)</a>
+        <a href="money.html?src=iframe/money-5.html">研究生專區</a>
+        <a href="money.html?src=iframe/money-6.html">就學役男專區</a>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>區塊五</h3>
-      <ul>
-        <li><a href="#">連結一</a></li>
-      </ul>
+    <div class="dropdown">
+        <a href="announcement.htm">最新公告</a>
+        <div class="dropdown-menu">
+        <a href="announcement.htm">所有公告</a>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>區塊六</h3>
-      <ul>
-        <li><a href="#">連結一</a></li>
-        <li><a href="#">連結二</a></li>
-        <li><a href="#">連結三</a></li>
-        <li><a href="#">連結四</a></li>
-        <li><a href="#">連結五</a></li>
-      </ul>
+    <div class="dropdown">
+        <a href="graduation.htm">畢業資格</a>
+        <div class="dropdown-menu">
+        <a href="graduation.htm?src=iframe/gra-1.htm">畢業審核</a>
+        <a href="graduation.htm?src=iframe/gra-2.htm">學位授予</a>
+        </div>
     </div>
-  </div>
+
+    <div class="dropdown">
+        <a href="download.html">表單下載</a>
+        <div class="dropdown-menu">
+        <a href="download.html">所有表單</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="question.html">常見問題</a>
+    </div>
+    </nav>
 </body>
-</html>
